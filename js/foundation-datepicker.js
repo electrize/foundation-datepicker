@@ -646,12 +646,12 @@
 
             html = '';
             year = parseInt(year / 10, 10) * 10;
+            year -= 1;
             var yearCont = this.picker.find('.datepicker-years')
                 .find('th:eq(1)')
-                .text(year + '-' + (year + 9))
+                .text(year + '-' + (year + 11))
                 .end()
                 .find('td');
-            year -= 1;
             for (var i = -1; i < 11; i++) {
                 html += '<span class="year' + (i == -1 || i == 10 ? ' old' : '') + (currentYear == year ? ' active' : '') + (year < startYear || year > endYear ? ' disabled' : '') + '">' + year + '</span>';
                 year += 1;
